@@ -16,8 +16,8 @@
 		var player1 = prompt('Player 1: State your name');
 		var player2 = prompt('Player 2: State your name');
 		var weapons = ['rock' , 'paper', 'scissors'];
-		var player1Weapon = weaponOfChoice1;
-		var player2Weapon = weaponOfChoice2;
+		var player1Win = 0;
+		var player2Win = 0;
 
 		// array for randomization
 		// variable.length = how many values are in the variable
@@ -38,11 +38,13 @@
 					case 'scissorspaper':
 					case 'paperrock':
 						console.log(player1 + ' is the winner!');
+						console.log(player2 + ' has won ' + player1Win + ' times.');
 						break;
 					case 'rockpaper':
 					case 'paperscissors':
 					case 'scissorsrock':
 						console.log(player2 + ' is the winner!');
+						console.log(player2 + ' has won ' + player2Win + ' times.');
 						break;
 					case 'scissorsscissors':
 					case 'rockrock':
@@ -50,6 +52,9 @@
 						console.log("It's a tie! Try again!");
 						break;
 					}
+
+
+					// for (player1Win; player1Win >= 3, player1Win++);
 
 
 	</script>
