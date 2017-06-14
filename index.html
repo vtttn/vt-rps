@@ -16,46 +16,76 @@
 		var player1 = prompt('Player 1: State your name');
 		var player2 = prompt('Player 2: State your name');
 		var weapons = ['rock' , 'paper', 'scissors'];
-		var player1Win = 0;
-		var player2Win = 0;
+		var player1Win = 1;
+		var player2Win = 1;
 
 		// array for randomization
 		// variable.length = how many values are in the variable
 		// Math.random = creates a random decimal number between 0 and 1
 		// parseInt = cuts off all the decimals
 		// % 
+
+
 		var weaponOfChoice1 = weapons[parseInt(Math.random()*weapons.length) %3]; 
 		var weaponOfChoice2 = weapons[parseInt(Math.random()*weapons.length) %3]; 
 
 			console.log('Welcome to RPS!');
 			console.log('Player 1: ' + player1);
 			console.log('Player 2: ' + player2);
-			console.log(player1 + ': ' + weaponOfChoice1);
-			console.log(player2 + ': ' + weaponOfChoice2);
+	
+		while(player1Win <= 3 && player2Win <= 3) {
+		
 
-				switch(weaponOfChoice1+weaponOfChoice2) {
+			switch(weaponOfChoice1+weaponOfChoice2) {
 					case 'rockscissors':
 					case 'scissorspaper':
 					case 'paperrock':
+						console.log(player1 + ': ' + weaponOfChoice1);
+						console.log(player2 + ': ' + weaponOfChoice2);
 						console.log(player1 + ' is the winner!');
-						console.log(player2 + ' has won ' + player1Win + ' times.');
+						console.log(player1 + ' has won ' + player1Win + ' times.');
+						player1Win++;
 						break;
 					case 'rockpaper':
 					case 'paperscissors':
 					case 'scissorsrock':
+						console.log(player1 + ': ' + weaponOfChoice1);
+						console.log(player2 + ': ' + weaponOfChoice2);
 						console.log(player2 + ' is the winner!');
 						console.log(player2 + ' has won ' + player2Win + ' times.');
+						player2Win++;
 						break;
 					case 'scissorsscissors':
 					case 'rockrock':
 					case 'paperpaper':
+						console.log(player1 + ': ' + weaponOfChoice1);
+						console.log(player2 + ': ' + weaponOfChoice2);
 						console.log("It's a tie! Try again!");
+						console.log(player1 + ' has won ' + player1Win + ' times.');
+						console.log(player2 + ' has won ' + player2Win + ' times.');
 						break;
 					}
 
+			}
 
-					// for (player1Win; player1Win >= 3, player1Win++);
+			if (player1Win > player2Win) {
+				console.log(player1 + ' is the overall winner!');
+			} else { 
+				console.log(player2 + ' is the overall winner!');
+			}
+	 
+				
+				/*
+				for (player1Win; player1Win <= 3; player1Win++) {
+					if (player1Win < 3) {
+						console.log('Keep playing!');
+					} else {
+						console.log(player1 + ' is the overall winner!');
+					}
 
+				}
+				*/
+				
 
 	</script>
 
