@@ -23,17 +23,17 @@
 		// variable.length = how many values are in the variable
 		// Math.random = creates a random decimal number between 0 and 1
 		// parseInt = cuts off all the decimals
-		// % 
 
 
 			console.log('Welcome to RPS!');
 			console.log('Player 1: ' + player1);
 			console.log('Player 2: ' + player2);
 
-
-		while(player1Win <= 3 && player2Win <= 3) {
+		// main game loop
+		while(player1Win < 3 && player2Win < 3) {
 			var weaponOfChoice1 = weapons[parseInt(Math.random()*weapons.length) %3]; 
 			var weaponOfChoice2 = weapons[parseInt(Math.random()*weapons.length) %3]; 
+		//var weaponOfChoice1+2 are inside the while loop to reset the random generator
 
 			switch(weaponOfChoice1+weaponOfChoice2) {
 					case 'rockscissors':
