@@ -42,7 +42,8 @@
 						console.log(player1 + ': ' + weaponOfChoice1);
 						console.log(player2 + ': ' + weaponOfChoice2);
 						console.log(player1 + ' is the winner!');
-						console.log(player1 + ' has won ' + player1Win + ' times.');
+						console.log(player1 + ': ' + player1Win);
+						console.log(player2 + ': ' + player1Win);
 						player1Win++;
 						break;
 					case 'rockpaper':
@@ -50,8 +51,9 @@
 					case 'scissorsrock':
 						console.log(player1 + ': ' + weaponOfChoice1);
 						console.log(player2 + ': ' + weaponOfChoice2);
-						console.log(player2 + ' is the winner!');
-						console.log(player2 + ' has won ' + player2Win + ' times.');
+						console.log(player1 + ' is the winner!');
+						console.log(player1 + ': ' + player1Win);
+						console.log(player2 + ': ' + player1Win);
 						player2Win++;
 						break;
 					case 'scissorsscissors':
@@ -60,16 +62,28 @@
 						console.log(player1 + ': ' + weaponOfChoice1);
 						console.log(player2 + ': ' + weaponOfChoice2);
 						console.log("It's a tie! Try again!");
-						console.log(player1 + ' has won ' + player1Win + ' times.');
-						console.log(player2 + ' has won ' + player2Win + ' times.');
+						console.log(player1 + ': ' + player1Win);
+						console.log(player2 + ': ' + player1Win);
 						break;
 					}
+
+				if(player1Win > player2Win){
+		 			var playAgain = alert(player1 + ' is ahead! Next Round?\n' + player1 + ': ' + player1Win) ;
+		 		}
+        		else if(player1Win < player2Win){
+		 			var playAgain = alert(player2 + ' is ahead! Next Round?\n' + player2 + ': ' + player1Win);
+		 		}
+        		else {
+		 			var playAgain = alert('Players are tied! \n' + player1 + ': ' + player1Win + '\n' + player2 + ': ' + player2Win);
+		 		}		
 			}
 
-			if (player1Win > player2Win) {
-				console.log(player1 + ' is the overall winner!');
+			if (player1Win >= 3) {
+				var playAgain = alert(player1 +' is the winner!');
+				console.log(player1 + ' won the game!');
 			} else { 
-				console.log(player2 + ' is the overall winner!');
+				var playAgain = alert(player2 + ' is the winner!');
+				console.log(player2 + ' won the game!');
 			}
 				
 
