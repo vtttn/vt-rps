@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>VT - Rock Paper Scissors</title>
+
+	<script type="text/javascript">
+
+		// use switch statements to do an easier if/else statement for the rock paper scissors. break stops the loop (go past the switch statement. past the switch{})  default is the else statement. check class slides
+
+
+
+/*		var player1Weapon = prompt(player1 +', choose your weapon! Will it be rock, paper, or scissors?');
+		var player2Weapon = prompt(player2 +', choose your weapon! Will it be rock, paper, or scissors?');*/
+
+		
+
+		var player1 = prompt('Player 1: State your name');
+		var player2 = prompt('Player 2: State your name');
+		var weapons = ['rock' , 'paper', 'scissors'];
+		var player1Weapon = weaponOfChoice1;
+		var player2Weapon = weaponOfChoice2;
+
+		// array for randomization
+		// variable.length = how many values are in the variable
+		// Math.random = creates a random decimal number between 0 and 1
+		// parseInt = cuts off all the decimals
+		// % 
+		var weaponOfChoice1 = weapons[parseInt(Math.random()*weapons.length) %3]; 
+		var weaponOfChoice2 = weapons[parseInt(Math.random()*weapons.length) %3]; 
+
+			console.log('Welcome to RPS!');
+			console.log('Player 1: ' + player1);
+			console.log('Player 2: ' + player2);
+			console.log(player1 + ': ' + weaponOfChoice1);
+			console.log(player2 + ': ' + weaponOfChoice2);
+
+				switch(weaponOfChoice1+weaponOfChoice2) {
+					case 'rockscissors':
+					case 'scissorspaper':
+					case 'paperrock':
+						console.log(player1 + ' is the winner!');
+						break;
+					case 'rockpaper':
+					case 'paperscissors':
+					case 'scissorsrock':
+						console.log(player2 + ' is the winner!');
+						break;
+					case 'scissorsscissors':
+					case 'rockrock':
+					case 'paperpaper':
+						console.log("It's a tie! Try again!");
+						break;
+					}
+
+
+	</script>
+
+	</head>
+
+	<body>
+		
+	</body>
+
+</html>
