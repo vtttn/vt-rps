@@ -26,15 +26,14 @@
 		// % 
 
 
-		var weaponOfChoice1 = weapons[parseInt(Math.random()*weapons.length) %3]; 
-		var weaponOfChoice2 = weapons[parseInt(Math.random()*weapons.length) %3]; 
-
 			console.log('Welcome to RPS!');
 			console.log('Player 1: ' + player1);
 			console.log('Player 2: ' + player2);
-	
+
+
 		while(player1Win <= 3 && player2Win <= 3) {
-		
+			var weaponOfChoice1 = weapons[parseInt(Math.random()*weapons.length) %3]; 
+			var weaponOfChoice2 = weapons[parseInt(Math.random()*weapons.length) %3]; 
 
 			switch(weaponOfChoice1+weaponOfChoice2) {
 					case 'rockscissors':
@@ -65,7 +64,6 @@
 						console.log(player2 + ' has won ' + player2Win + ' times.');
 						break;
 					}
-
 			}
 
 			if (player1Win > player2Win) {
@@ -73,18 +71,6 @@
 			} else { 
 				console.log(player2 + ' is the overall winner!');
 			}
-	 
-				
-				/*
-				for (player1Win; player1Win <= 3; player1Win++) {
-					if (player1Win < 3) {
-						console.log('Keep playing!');
-					} else {
-						console.log(player1 + ' is the overall winner!');
-					}
-
-				}
-				*/
 				
 
 	</script>
